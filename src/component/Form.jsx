@@ -34,6 +34,9 @@ const Form = ({ children, onErrorsChange, onScoreChange }) => {
 
         onErrorsChange(errors); // Passing errors back to parent component
         onScoreChange(score); // Passing score back to parent component
+
+        // Clear the form inputs :
+        // event.target.reset();
     }
 
     return (
