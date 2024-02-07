@@ -6,7 +6,7 @@ const Result = ({ errors, score }) => {
 
     console.log(errors)
     return (
-        <div className='my-5'>
+        <div className='mt-10 mb-5'>
             {errors && Object.keys(errors).length > 0 ? (
                 <div>
                     <span className='text-red-900'><b>Erreur(s) :</b></span>

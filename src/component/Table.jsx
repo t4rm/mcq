@@ -39,7 +39,7 @@ const Table = () => {
                 </table>
             </div>
             <br />
-            <div className='flex flex-row-reverse w-full px-5'>
+            <div className='flex flex-row-reverse w-full px-5 mb-10'>
                 <button type="submit" className="text-white bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-violet-600 dark:hover:bg-violet-700 dark:focus:ring-violet-800">Submit</button>
                 <button type="reset" className="mx-2 text-white bg-violet-400 hover:bg-violet-500 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-violet-700 dark:hover:bg-violet-800 dark:focus:ring-violet-400">Clear</button>
             </div>
