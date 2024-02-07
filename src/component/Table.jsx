@@ -25,9 +25,8 @@ const Table = () => {
         // Change the state of isFormCleared to true to trigger shuffling
         setIsFormCleared(true);
     };
-
     return (
-        <div className='max-vw-full 2xl:max-w-screen-xl'>
+        <div className='max-vw-full 2xl:max-w-screen-xl text-xs sm:text-sm md:text-base'>
             <div className='overflow-x-auto mx-5 '>
                 <table className='table-auto border-collapse border border-slate-500 bg-violet-200'>
                     <thead>
@@ -53,7 +52,7 @@ const Table = () => {
                 </table>
             </div>
             <br />
-            <div className='flex flex-row-reverse w-full px-5 mb-10'>
+            <div className='flex flex-row-reverse w-full px-5'>
                 <button type="submit" className="text-white bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-violet-600 dark:hover:bg-violet-700 dark:focus:ring-violet-800">Submit</button>
                 <button type="reset" onClick={clearForm} className="mx-2 text-white bg-violet-400 hover:bg-violet-500 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-violet-700 dark:hover:bg-violet-800 dark:focus:ring-violet-400">Clear</button>
             </div>

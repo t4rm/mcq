@@ -19,3 +19,19 @@ code {
 .max-vw-full {
   max-width: 100vw;
 }
+
+.responsive-result {
+  max-height: 10vh;
+}
+
+@screen lg {
+  .responsive-result {
+    max-height: 40vh;
+  }
+}
+
+@screen md {
+  .responsive-result {
+    max-height: 30vh;
+  }
+}
