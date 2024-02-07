@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { useDataContext } from '../context/DataContext';
 import { shuffleArray } from "../utils/functions";
 const Table = () => {
