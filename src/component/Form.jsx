@@ -28,15 +28,19 @@ const Form = ({ children, onErrorsChange, onScoreChange }) => {
             const selectedAnswers = answersById[id];
 
             if (selectedAnswers && selectedAnswers.length > 0) {
-                sameMembers(answers, selectedAnswers) ? score += 1 : (errors[id] = (answers.filter((element) => !selectedAnswers.includes(element)))); // One error or more ? No points.
+                if (sameMembers(answers, selectedAnswers)) {
+                    score += 1
+                } else {
+                    // Errors concerning the missing answers
+                    errors[id] = (answers.filter((element) => !selectedAnswers.includes(element))) // One error or more ? No points & pushed to array.
+                    // Errors concerning the extra answers
+                    errors[id]["extra"] = (selectedAnswers.filter((element) => !answers.includes(element))) // One error or more ? No points & pushed to array.
+                }
             }
         }
 
         onErrorsChange(errors); // Passing errors back to parent component
         onScoreChange(score); // Passing score back to parent component
-
-        // Clear the form inputs :
-        // event.target.reset();
     }
 
     return (
