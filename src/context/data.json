@@ -89,8 +89,8 @@
             "id": 11,
             "name": "(function x -> x + 3) 2)",
             "answers": [
-                5,
-                7
+                6,
+                8
             ]
         }
     ],
