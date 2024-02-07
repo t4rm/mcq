@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDataContext } from '../context/DataContext';
 import { shuffleArray } from "../utils/functions";
 const Table = () => {
@@ -6,22 +6,22 @@ const Table = () => {
     const [isFormCleared, setIsFormCleared] = useState(false);
 
     // Generate headers and rows from our data :
-    const headers = data['answers'].map((answer) => [answer['id'], answer['value']]);
-    const rows = data['propositions'].map((proposition) => [proposition['id'], proposition['name']]);
+    const [headers, setHeaders] = useState(data['answers'].map((answer) => [answer['id'], answer['value']]));
+    const [rows, setRows] = useState(data['propositions'].map((proposition) => [proposition['id'], proposition['name']]));
 
     // Shuffle them when form is cleared :
     useEffect(() => {
-        if (isFormCleared) {
-            shuffleArray(headers);
-            shuffleArray(rows);
-            setIsFormCleared(false); // Reset the state after shuffling
-        }
+        console.log(isFormCleared)
+        const shuffledHeaders = shuffleArray(headers);
+        const shuffledRows = shuffleArray(rows);
+        setHeaders(shuffledHeaders);
+        setRows(shuffledRows);
     }, [isFormCleared, headers, rows]);
 
     // Function to clear the form and trigger shuffling
     const clearForm = () => {
         // Change the state of isFormCleared to true to trigger shuffling
-        setIsFormCleared(true);
+        setIsFormCleared(!isFormCleared);
     };
 
     return (

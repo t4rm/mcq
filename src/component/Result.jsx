@@ -4,7 +4,6 @@ import { useDataContext } from '../context/DataContext';
 const Result = ({ errors, score }) => {
     const { data } = useDataContext();
 
-    console.log(errors)
     return (
         <div className='mt-10 mb-5'>
             {errors && Object.keys(errors).length > 0 ? (
