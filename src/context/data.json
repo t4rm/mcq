@@ -1,0 +1,147 @@
+{
+    "propositions": [
+        {
+            "id": 1,
+            "name": "let add x y = x + y",
+            "answers": [
+                7,
+                10
+            ]
+        },
+        {
+            "id": 2,
+            "name": "let x = 2 in x + 3",
+            "answers": [
+                4,
+                8
+            ]
+        },
+        {
+            "id": 3,
+            "name": "let x = 2",
+            "answers": [
+                10,
+                12
+            ]
+        },
+        {
+            "id": 4,
+            "name": "let x = 2 and y = 3 in x + y",
+            "answers": [
+                4,
+                5,
+                8
+            ]
+        },
+        {
+            "id": 5,
+            "name": "let succ x = x + 1",
+            "answers": [
+                7,
+                10
+            ]
+        },
+        {
+            "id": 6,
+            "name": "function x -> x + 3",
+            "answers": [
+                2,
+                3
+            ]
+        },
+        {
+            "id": 7,
+            "name": "(fun x y -> x + y) 2 3",
+            "answers": [
+                6,
+                8,
+                9
+            ]
+        },
+        {
+            "id": 8,
+            "name": "fun x y -> x + y",
+            "answers": [
+                2,
+                3
+            ]
+        },
+        {
+            "id": 9,
+            "name": "x + 3",
+            "answers": [
+                6,
+                8,
+                9
+            ]
+        },
+        {
+            "id": 10,
+            "name": "( + )",
+            "answers": [
+                1,
+                2,
+                3,
+                11
+            ]
+        },
+        {
+            "id": 11,
+            "name": "(function x -> x + 3) 2)",
+            "answers": [
+                5,
+                7
+            ]
+        }
+    ],
+    "answers": [
+        {
+            "id": 1,
+            "value": "Opérateur sous forme préfixée"
+        },
+        {
+            "id": 2,
+            "value": "Expression fonctionnelle"
+        },
+        {
+            "id": 3,
+            "value": "Fonction à un argument"
+        },
+        {
+            "id": 4,
+            "value": "Définition locale de valeur(s) primitive(s)"
+        },
+        {
+            "id": 5,
+            "value": "Définition locale simultanée"
+        },
+        {
+            "id": 6,
+            "value": "Fonction appliquée à un argument"
+        },
+        {
+            "id": 7,
+            "value": "Définition globale de fonction(s)"
+        },
+        {
+            "id": 8,
+            "value": "Expression primitive"
+        },
+        {
+            "id": 9,
+            "value": "Fonction appliquée à plusieurs arguments"
+        },
+        {
+            "id": 10,
+            "value": "Déclaration"
+        },
+        {
+            "id": 11,
+            "value": "Fonction à plusieurs arguments"
+        },
+        {
+            "id": 12,
+            "value": "Définition globale de valeur(s) primitive(s)"
+        }
+    ]
+}

@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Table from './component/Table';
+import Result from "./component/Result";
+import Form from "./component/Form"
+import { DataProvider } from "./context/DataContext.js";
 
 function App() {
+  const [formErrors, setFormErrors] = useState([]);
+  const [formScore, setFormScore] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DataProvider>
+      <div className='bg-violet-100 grid content-center h-screen place-items-center overflow-auto'>
+        <Result errors={formErrors} score={formScore} />
+        <Form onErrorsChange={setFormErrors} onScoreChange={setFormScore}>
+          <Table />
+        </Form>
+      </div>
+    </DataProvider>
   );
 }
 
