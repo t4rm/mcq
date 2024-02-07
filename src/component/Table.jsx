@@ -16,7 +16,7 @@ const Table = () => {
             shuffleArray(rows);
             setIsFormCleared(false); // Reset the state after shuffling
         }
-    }, [isFormCleared]);
+    }, [isFormCleared, headers, rows]);
 
     // Function to clear the form and trigger shuffling
     const clearForm = () => {
