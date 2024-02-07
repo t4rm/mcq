@@ -11,17 +11,19 @@ const Table = () => {
 
     // Shuffle them when form is cleared :
     useEffect(() => {
-        console.log(isFormCleared)
-        const shuffledHeaders = shuffleArray(headers);
-        const shuffledRows = shuffleArray(rows);
-        setHeaders(shuffledHeaders);
-        setRows(shuffledRows);
+        if (isFormCleared) {
+            shuffleArray(headers)
+            setHeaders(headers);
+            shuffleArray(rows)
+            setRows(rows);
+            setIsFormCleared(false);
+        }
     }, [isFormCleared, headers, rows]);
 
     // Function to clear the form and trigger shuffling
     const clearForm = () => {
         // Change the state of isFormCleared to true to trigger shuffling
-        setIsFormCleared(!isFormCleared);
+        setIsFormCleared(true);
     };
 
     return (
