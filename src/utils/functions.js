@@ -23,8 +23,6 @@ export function formatErrors(errors, data) {
     let str = "<p>Aucune erreur</p>";
     if (checkIfEmpty(arrErrors)) return str;
     
-    // if (arrErrorsExtra.length > 0) arrErrors.splice(arrErrors.indexOf('extra'), 1);
-    
     str = "<span class  ='text-red-900'><b>Erreur(s) :</b></span>";
     str += "<ul class = 'list-disc'>";
 
@@ -35,7 +33,6 @@ export function formatErrors(errors, data) {
         str += "</ul>";
     }
 
-    console.log(arrErrorsExtra)
     if (arrErrorsExtra.length > 0) {
         str += `<br/> Il y a des réponses en trop :<ul class = 'pl-5'>`;
         str += `${arrErrorsExtra.map((id) => { return "<li>" + data["answers"][id - 1]['value'] + "</li>" })}`;
