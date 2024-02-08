@@ -18,6 +18,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -26,12 +27,11 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/t4rm/mcq">
-    <img src="images/icon.png" alt="Logo" width="80" height="80">
+    <img src="/public/images/icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">OCaml - Multiple Choice Question (MCQ)</h3>
@@ -200,7 +200,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -238,10 +238,10 @@ Project Link: [https://github.com/t4rm/mcq](https://github.com/t4rm/mcq)
 [issues-shield]: https://img.shields.io/github/issues/t4rm/mcq.svg?style=for-the-badge
 [issues-url]: https://github.com/t4rm/mcq/issues
 [license-shield]: https://img.shields.io/github/license/t4rm/mcq.svg?style=for-the-badge
-[license-url]: https://github.com/t4rm/mcq/blob/master/LICENSE.txt
+[license-url]: https://github.com/t4rm/mcq/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/tareek
-[product-screenshot]: images/product_screenshot.png
+[product-screenshot]: public/images/product_screenshot.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Html5]: https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white
