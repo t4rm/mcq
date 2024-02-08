@@ -18,13 +18,13 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
@@ -200,7 +200,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -238,7 +238,7 @@ Project Link: [https://github.com/t4rm/mcq](https://github.com/t4rm/mcq)
 [issues-shield]: https://img.shields.io/github/issues/t4rm/mcq.svg?style=for-the-badge
 [issues-url]: https://github.com/t4rm/mcq/issues
 [license-shield]: https://img.shields.io/github/license/t4rm/mcq.svg?style=for-the-badge
-[license-url]: https://github.com/t4rm/mcq/blob/master/LICENSE.txt
+[license-url]: https://github.com/t4rm/mcq/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/tareek
 [product-screenshot]: public/images/product_screenshot.png
