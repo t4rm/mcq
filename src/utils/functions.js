@@ -1,3 +1,5 @@
+import { getAnswerById, getPropositionById } from "./dataHandling";
+
 export function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -12,31 +14,37 @@ export function sameMembers(arr1, arr2) {
         arr2.every(item => set1.has(item))
 }
 
-function checkIfEmpty(array) {
-    return Array.isArray(array) && (array.length === 0 || array.every(checkIfEmpty));
-}
-
 export function formatErrors(errors, data) {
-    const arrErrors = Object.keys(errors);
-    const arrErrorsExtra = Object.values(errors).flatMap(error => error.extra);
-
     let str = "<p>Aucune erreur</p>";
-    if (checkIfEmpty(arrErrors)) return str;
-    
-    str = "<span class  ='text-red-900'><b>Erreur(s) :</b></span>";
-    str += "<ul class = 'list-disc'>";
+    if (errors.length === 0) return str;
+    str = `<span class='text-red-900'><b>Erreur(s) :</b></span>`;
+    str += "<ul class='list-disc'>";
 
-    for (const question of arrErrors) {
-        if(typeof question === Array) return;
-        str += `<li>Pour ${data["propositions"][question - 1]["name"]} :<br/> Il manque :<ul class='pl-5'>`;
-        str += `${errors[question].map((id) => { return "<li>" + data["answers"][id - 1]['value'] + "</li>" })}`;
-        str += "</ul>";
-    }
+    // Error handling :
+    for (const error of errors) {
+        // Store the proposition :
+        let proposition = getPropositionById(data, error.getQuestionId())
+        if (!proposition) console.log("Error : no proposition found for id " + error.getQuestionId());
 
-    if (arrErrorsExtra.length > 0) {
-        str += `<br/> Il y a des réponses en trop :<ul class = 'pl-5'>`;
-        str += `${arrErrorsExtra.map((id) => { return "<li>" + data["answers"][id - 1]['value'] + "</li>" })}`;
-        str += "</ul>";
+        // Store the missing answers :
+        let errorMissing = error.getErrors()
+        errorMissing = errorMissing.map((id) => { return getAnswerById(data, id) })
+        // Store the extra answers :
+        let errorExtras = error.getExtra()
+        errorExtras = errorExtras.map((id) => { return getAnswerById(data, id) })
+
+        str += `<li>Pour <b>${proposition['name']}</b> :`
+        if (errorMissing.length > 0) {
+            str += `<br/><span class='pl-5'>Il manque : `;
+            str += `${errorMissing.map((err) => { return "<b>" + err.value + "</b>" }).join(", ")}`;
+            str += "</span>";
+        }
+        if (errorExtras.length > 0) {
+            str += `<br/><span class='pl-5'>Il y a en trop : `;
+            str += `${errorExtras.map((err) => { return "<b>" + err.value + "</b>" }).join(", ")}`;
+            str += "</span>";
+        }
+        str += "</li><br/>";
     }
 
     str += "</ul>";
