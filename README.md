@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/t4rm/mcq">
-    <img src="images/icon.png" alt="Logo" width="80" height="80">
+    <img src="/public/images/icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">OCaml - Multiple Choice Question (MCQ)</h3>
@@ -241,7 +241,7 @@ Project Link: [https://github.com/t4rm/mcq](https://github.com/t4rm/mcq)
 [license-url]: https://github.com/t4rm/mcq/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/tareek
-[product-screenshot]: images/product_screenshot.png
+[product-screenshot]: public/images/product_screenshot.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Html5]: https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white
