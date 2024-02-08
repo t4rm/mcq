@@ -36,7 +36,7 @@ const Form = ({ children, onErrorsChange, onScoreChange }) => {
                     let mainErrors = (answers.filter((element) => !selectedAnswers.includes(element))) // One error or more ? No points & pushed to array.
                     // Errors concerning the extra answers
                     let extraErrors = (selectedAnswers.filter((element) => !answers.includes(element))) // One error or more ? No points & pushed to array.
-                    
+
                     errors.push(new Error(id, mainErrors, extraErrors));
                 }
             }
@@ -46,8 +46,12 @@ const Form = ({ children, onErrorsChange, onScoreChange }) => {
         onScoreChange(score); // Passing score back to parent component
     }
 
+    const handleReset = (event) => {
+        onErrorsChange([]); // Reset errors
+        onScoreChange(0); // Reset score
+    }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} onReset={handleReset}>
             {children}
         </form>
     );
