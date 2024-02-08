@@ -24,6 +24,37 @@ code {
   max-height: 10vh;
 }
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e2e2e2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #867396;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #63546e;
+}
+
+/* Scrollbar for Figures : */
+
+figure::-webkit-scrollbar-track {
+  background: #dbdbdb;
+}
+
+figure::-webkit-scrollbar-thumb {
+  background: #a7a7a7;
+}
+
 @screen lg {
   .responsive-result {
     max-height: 40vh;
