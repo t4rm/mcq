@@ -2,123 +2,127 @@
     "propositions": [
         {
             "id": 1,
-            "name": "let add x y = x + y",
+            "name": "x+3",
             "answers": [
-                7,
-                10
+                1,
+                10,
+                11
             ]
         },
         {
             "id": 2,
-            "name": "let x = 2 in x + 3",
+            "name": "( + )",
             "answers": [
-                4,
-                8
+                2,
+                3,
+                5,
+                6
             ]
         },
         {
             "id": 3,
             "name": "let x = 2",
             "answers": [
-                10,
-                12
+                0,
+                9
             ]
         },
         {
             "id": 4,
-            "name": "let x = 2 and y = 3 in x + y",
+            "name": "let x = 2 in x+3",
             "answers": [
-                4,
-                5,
+                1,
                 8
             ]
         },
         {
             "id": 5,
-            "name": "let succ x = x + 1",
+            "name": "fun x y -> x+y",
             "answers": [
-                7,
-                10
+                2,
+                3,
+                6
             ]
         },
         {
             "id": 6,
-            "name": "function x -> x + 3",
+            "name": "let succ x = x+1",
+            "answers": [
+                0,
+                7
+            ]
+        },
+        {
+            "id": 7,
+            "name": "function x -> x+3",
             "answers": [
                 2,
                 3
             ]
         },
         {
-            "id": 7,
-            "name": "(fun x y -> x + y) 2 3",
-            "answers": [
-                6,
-                8,
-                9
-            ]
-        },
-        {
             "id": 8,
-            "name": "fun x y -> x + y",
+            "name": "let add x y = x+y",
             "answers": [
-                2,
-                3,
-                11
+                0,
+                7
             ]
         },
         {
             "id": 9,
-            "name": "x + 3",
+            "name": "let x = 2 and y = 3 in x+y",
             "answers": [
-                6,
-                8,
-                9
+                1,
+                4,
+                8
             ]
         },
         {
             "id": 10,
-            "name": "( + )",
+            "name": "(fun x y -> x+y) 2 3",
             "answers": [
                 1,
-                2,
-                3,
+                10,
                 11
             ]
         },
         {
             "id": 11,
-            "name": "(function x -> x + 3) 2)",
+            "name": "(function x -> x+3) 2",
             "answers": [
-                6,
-                8
+                1,
+                10
             ]
         }
     ],
     "answers": [
         {
+            "id": 0,
+            "value": "Déclaration"
+        },
+        {
             "id": 1,
-            "value": "Opérateur sous forme préfixée"
+            "value": "Expression primitive"
         },
         {
             "id": 2,
-            "value": "Expression fonctionnelle"
-        },
-        {
-            "id": 3,
             "value": "Fonction à un argument"
         },
         {
-            "id": 4,
-            "value": "Définition locale de valeur(s) primitive(s)"
+            "id": 3,
+            "value": "Expression fonctionnelle"
         },
         {
-            "id": 5,
+            "id": 4,
             "value": "Définition locale simultanée"
         },
         {
+            "id": 5,
+            "value": "Opérateur sous forme préfixée"
+        },
+        {
             "id": 6,
-            "value": "Fonction appliquée à un argument"
+            "value": "Fonction à plusieurs arguments"
         },
         {
             "id": 7,
@@ -126,23 +130,19 @@
         },
         {
             "id": 8,
-            "value": "Expression primitive"
+            "value": "Définition locale de valeur(s) primitive(s)"
         },
         {
             "id": 9,
-            "value": "Fonction appliquée à plusieurs arguments"
+            "value": "Définition globale de valeur(s) primitive(s)"
         },
         {
             "id": 10,
-            "value": "Déclaration"
+            "value": "Fonction appliquée à un argument"
         },
         {
             "id": 11,
-            "value": "Fonction à plusieurs arguments"
-        },
-        {
-            "id": 12,
-            "value": "Définition globale de valeur(s) primitive(s)"
+            "value": "Fonction appliquée à plusieurs arguments"
         }
     ]
 }
