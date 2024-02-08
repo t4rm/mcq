@@ -48,11 +48,11 @@ code {
 /* Scrollbar for Figures : */
 
 figure::-webkit-scrollbar-track {
-  background: #dbdbdb;
+  background: #e2e2e2;
 }
 
 figure::-webkit-scrollbar-thumb {
-  background: #a7a7a7;
+  background: #867396;
 }
 
 @screen lg {
