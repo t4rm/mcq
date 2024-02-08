@@ -7,7 +7,7 @@ const Result = ({ errors, score }) => {
     return (
         <div className='px-5 pb-10 max-vw-full 2xl:max-w-screen-xl text-xs sm:text-sm md:text-base'>
             {errors && errors.length > 0 ? (
-                <div className='overflow-y-scroll responsive-result' dangerouslySetInnerHTML={{ __html: formatErrors(errors, data) }}>
+                <div className='overflow-auto responsive-result' dangerouslySetInnerHTML={{ __html: formatErrors(errors, data) }}>
                 </div>
             ) : (
                 <p>Results will be displayed here</p>
