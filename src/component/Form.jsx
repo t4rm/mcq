@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDataContext } from '../context/DataContext';
 import { sameMembers } from "../utils/functions";
+import { Error } from '../metier/Error';
 
 const Form = ({ children, onErrorsChange, onScoreChange }) => {
     const { data } = useDataContext();
@@ -11,7 +12,7 @@ const Form = ({ children, onErrorsChange, onScoreChange }) => {
 
         // Group answers by id
         const answersById = {};
-        const errors = {};
+        const errors = [];
 
         for (let [id, answer] of formData) {
             if (!answersById[id]) {
@@ -32,9 +33,11 @@ const Form = ({ children, onErrorsChange, onScoreChange }) => {
                     score += 1
                 } else {
                     // Errors concerning the missing answers
-                    errors[id] = (answers.filter((element) => !selectedAnswers.includes(element))) // One error or more ? No points & pushed to array.
+                    let mainErrors = (answers.filter((element) => !selectedAnswers.includes(element))) // One error or more ? No points & pushed to array.
                     // Errors concerning the extra answers
-                    errors[id]["extra"] = (selectedAnswers.filter((element) => !answers.includes(element))) // One error or more ? No points & pushed to array.
+                    let extraErrors = (selectedAnswers.filter((element) => !answers.includes(element))) // One error or more ? No points & pushed to array.
+                    
+                    errors.push(new Error(id, mainErrors, extraErrors));
                 }
             }
         }
