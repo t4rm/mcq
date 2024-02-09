@@ -221,7 +221,7 @@ Project Link: [https://github.com/t4rm/mcq](https://github.com/t4rm/mcq)
 ## Acknowledgments
 
 * [OCaml-logo](https://github.com/ocaml/ocaml-logo/tree/master)
-* [M. GRANGE Aristide](https://dblp.org/pid/58/6090.html)
+* [M. GRANGE Aristide](https://github.com/laowantong)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
